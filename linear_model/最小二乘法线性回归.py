@@ -1,4 +1,4 @@
-# datasets自带糖尿病数据,linear_model线性模拟模型discriminant_analysis, cross_validation
+# datasets自带糖尿病数据,linear_model线性模拟模型
 from sklearn import datasets, linear_model
 
 
@@ -8,7 +8,7 @@ x = dataDict[xTitle]  # 获取原始数据
 y = dataDict[yTitle]  # 获取目标数值
 clf = linear_model.LinearRegression(
     fit_intercept=True, normalize=True, copy_X=False, n_jobs=-1)
-# 计算b值，回归前进行归一化处理，不复制x，使用所有cpu
+#使用线性模拟中的最小二乘法计算， 计算b值，回归前进行归一化处理，不复制x，使用所有可用cpu
 clf.fit(x, y)
 print(clf.coef_)  # 系数
 print(clf.intercept_)  # 常量
