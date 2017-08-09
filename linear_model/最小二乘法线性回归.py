@@ -12,8 +12,8 @@ clf = linear_model.LinearRegression(
 clf.fit(x, y)
 print(clf.coef_)  # 系数
 print(clf.intercept_)  # 常量
-print(clf.predict(X))  # 求预测值
-print(clf.decision_function(X))  # 求预测，等同predict
-print(clf.score(X, y))  # R^2
+print(clf.predict(x))  # 求预测值
+print(clf.decision_function(x))  # 求预测，等同predict
+print(clf.score(x, y))  # R^2
 print(clf.get_params())  # 获取参数信息
 print(clf.set_params(fit_intercept=False))  # 重新设置参数
