@@ -35,7 +35,7 @@ plt.xlabel('alist')  # 横轴
 plt.ylabel('scores')  # 纵轴
 plt.xscale('log')  # 设置对数坐标
 plt.title('ridge')  # 标题
-plt.show()#作图
+plt.show()  # 作图
 
 # 岭回归广义交叉验证
 dataDict = datasets.load_diabetes()  # 获取数据字典
