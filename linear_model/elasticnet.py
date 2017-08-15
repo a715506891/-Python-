@@ -27,16 +27,3 @@ print(clf.decision_function(x))  # 求预测，等同predict
 print(clf.score(x, y))  # R^2，拟合优度
 print(clf.get_params())  # 获取参数信息
 print(clf.set_params(fit_intercept=False))  # 重新设置参数
-
-
-def testRidge(al, pl):
-    clfTest = linear_model.ElasticNet(alpha=al, l1_ratio=pl, fit_intercept=True,
-                                      normalize=True, copy_X=False)
-    clfTest.fit(x, y)  # 参数拟合
-    return clfTest.score(x, y)
-
-
-alist = np.logspace(-2, 2)  # logspace用于创建等比数列,默认以10为底
-rhos = np.logspace(0.01, 1)
-scores = [testRidge(alist[x], rhos[x]) for x in range(0, 10)]  # 获取每个alpha的r方
-
