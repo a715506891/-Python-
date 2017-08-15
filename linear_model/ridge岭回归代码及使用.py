@@ -1,4 +1,8 @@
 # datasets自带糖尿病数据,linear_model线性模拟模型discriminant_analysis, cross_validation
+'''
+岭回归(英文名：ridge regression, Tikhonov regularization)是一种专用于共线性数据分析的有偏估计回归方法，实质上是一种改良的最小二乘估计法
+通过放弃最小二乘法的无偏性，以损失部分信息、降低精度为代价获得回归系数更为符合实际、更可靠的回归方法，对病态数据的拟合要强于最小二乘法。
+'''
 from sklearn import datasets, linear_model
 import matplotlib.pyplot as plt  # 作图
 
